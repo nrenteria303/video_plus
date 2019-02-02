@@ -1,1 +1,12 @@
+// Utilities ++++++++++++++++++++++++++++++
+
+@import 'utilities/mixins';
+
+
+// BASE STYLES +++++++++++++++++++++++++++++
+
+@import 'base';
 @import 'header';
+@import 'top_movies';
+@import 'movie_lines';
+@import 'footer';

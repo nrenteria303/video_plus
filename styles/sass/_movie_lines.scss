@@ -1,0 +1,60 @@
+.movie_line {
+    margin: 125px auto 0;
+    height: 320px;
+    max-width: 98%;
+
+    .movie_line_tag {
+        @include wrapper;
+        margin-bottom: 20px;
+    }
+
+    .movie_line_imgs {
+        display: flex; 
+        justify-content: space-around;
+
+        .movie_line_trans_cont {
+            width: 25%;
+            perspective: 900px;
+
+            .movie_line_img_cont {
+                width: 92%;
+                transition: transform .3s ease-in;
+                transform-origin: bottom left;
+                margin: 0px;
+        
+                img {
+                    max-width: 99.5%;
+                }
+
+                .movie_line_description {
+                    max-width: 97%;
+                    text-align: center;
+                    margin-top: 5px;
+                    display: none;
+                }
+        
+                .movie_line_title {
+                    text-align: center;
+                    margin: 10px auto 10px;
+                }
+        
+                &:hover {
+                    background-color: rgb(73, 25, 117);
+                    border: 2px solid black;
+                    transform: translateZ(50px);
+        
+                    .movie_line_description {
+                        display: block;
+                        color: white;
+                        // width: 100%;
+                    }
+        
+                    .movie_line_title {
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+}
