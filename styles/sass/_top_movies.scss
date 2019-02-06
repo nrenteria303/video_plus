@@ -1,6 +1,10 @@
 #top_movies {
     @include wrapper;
     margin: 125px auto 0;
+    .top_movies_heading {
+        text-shadow: white 2px -2px 5px;
+        font-size: 1.9em;
+    }
 
     #top_movies_inner {
         display: flex;
