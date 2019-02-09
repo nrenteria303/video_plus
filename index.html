@@ -2,25 +2,43 @@
 <html>
   
   <head>
-    <link href="https://fonts.googleapis.com/css?family=B612|Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monda|Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">     
     <title>Videos & Such</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   
   </head>
   
   <body>
     <header>
       <div id="header_wrap">
-        <div id="header_logo">
+        <div id="header_logo"> 
           <h1>VideoPLUS <i class="fas fa-tv"></i></h1>
         </div>
-        <nav id="nav-buttons">
-          <p class="nav_item"><a href="#">Favorites</a></p>
+        <nav id="nav">
+          <p class="nav_item" id="favs"><a href="#">Favorites</a></p>
           <p class="nav_item"><a href="#">Staff Picks</a></p>
           <p class="nav_item"><a href="#">Contact</a></p>
           <p class="nav_item"><a href="#">Account</a></p>
         </nav>
+        <i class="fas fa-bars" id="menu_bars"></i>
+      </div>
+      <div id="nav_drop_cont" class="nav_drop_cont_hide">
+        <div class="nav_drop" id="nav_drop_fav">
+          <p>Scary</p>
+          <p>Funny</p>
+          <p>Animation</p>
+          <p>Tearjerkers</p>
+          <p>Kids Stuff</p>
+          <p>Dark &amp; Twisted</p>
+          <p>Teen Dramas</p>
+          <p>Soap Operas</p>
+          <p>Fantasy</p>
+          <p>Action</p>
+          <p>Adventure</p>
+          <p>Robots</p>
+        </div>
       </div>
     </header>
 
@@ -29,7 +47,7 @@
           <h2 class="top_movies_heading">Most Popular</h2>
           <div id="top_movies_inner">
             <img src="images/PH_800x500.jpg" alt="placeholder image" id="top_movie_1"> 
-            <div id="top_movies_side">
+            <div id="top_movies_addtl">
               <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
               <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
               <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
@@ -256,7 +274,7 @@
       </div>
     </footer>
   
-  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <!-- <script src="scripts/jquery-3.3.1.min.js"></script> -->
   <script src="scripts/app.js"></script>
   </body>
 

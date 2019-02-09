@@ -9,6 +9,10 @@ footer {
     border-top: 2px solid black;
     z-index: 100;
 
+    @media (max-width: $mq-md) {
+        margin-top: 200px;
+    }
+
     #footer_wrapper {
         @include wrapper;
         display: flex;

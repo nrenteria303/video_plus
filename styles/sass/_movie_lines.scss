@@ -3,6 +3,14 @@
     height: 320px;
     max-width: 97%;
 
+    @media (max-width: $mq-md) {
+        height: 500px;
+    }
+
+    @media (max-width: $mq-sm) {
+        height: 1100px;
+    }
+
     .movie_line_topper {
         display: flex;
 
@@ -24,16 +32,26 @@
         margin-bottom: 20px;
         font-size: 1.7em;
         text-shadow: white 2px -2px 5px;
-
+        line-height: .9em;
     }
 
-    .movie_line_imgs {
+    .movie_line_imgs { 
         display: flex;
+
+        @media (max-width: $mq-md) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
         .movie_line_trans_cont {
             width: 25%;
             perspective: 900px;
             z-index: 1;
+
+            @media (max-width: $mq-md) {
+                width: 300px;
+                margin-bottom: 60px;
+            }
 
             &:hover {
                 z-index: 10;
@@ -46,9 +64,11 @@
                 z-index: 0;
                 margin: 0px;
                 cursor: pointer;
+                // min-width: 260px;
+                display: block;
         
                 img {
-                    min-width: 99.5%;
+                    // min-width: 260px;
                     max-width: 100%;
                     z-index: 0;
                 }
@@ -58,11 +78,13 @@
                     text-align: center;
                     margin-top: 5px;
                     display: none;
+                    font-size: .9em;
                 }
         
                 .movie_line_title {
                     text-align: center;
-                    margin: 10px auto 10px;
+                    margin: 4px auto;
+                    font-size: 1.15em;
                 }
         
                 &:hover {
@@ -70,10 +92,15 @@
                     border: 2px solid black;
                     z-index: 100;
                     transform: translateZ(75px);
+
+                    @media(max-width: $mq-md) {
+                        transform: translateZ(45px);
+                    }
         
                     .movie_line_description {
                         display: block;
                         color: white;
+                        line-height: 1.15em;
                     }
         
                     .movie_line_title {
@@ -81,7 +108,6 @@
                     }
                 }
             }
-
         }
     }
 }

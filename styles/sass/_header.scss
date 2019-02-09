@@ -8,15 +8,38 @@ header {
     z-index: 10;
     z-index: 100;
 
+    h1 {
+        font-family: 'Orbitron', cursive;
+
+        @media (max-width: $mq-lg) {
+            font-size: 1.7em;
+        }
+    }
+
     #header_wrap {
         @include wrapper;
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: $mq-xl) {
+            max-width: 800px;
+        }
+
+        @media (max-width: $mq-lg) {
+            max-width: 600px;
+        }
+
+        @media (max-width: $mq-sm) {
+            max-width: 80%;
+        }
     }
 
     nav {
         display: flex;
+
+        @media (max-width: $mq-sm) {
+            display: none;
+        }
 
         p {
             align-self: center;
@@ -29,6 +52,11 @@ header {
                 border-left: 1px solid black;
             }
 
+            @media (max-width: $mq-lg) {
+                font-size: .88em;
+                width: 83px;
+            }
+
             a {
                 color: black;
                 text-decoration: none;
@@ -37,7 +65,86 @@ header {
                 &:hover {
                     color: rgb(216, 41, 216);
                     font-size: 17px;
+
+                    @media (max-width: $mq-lg) {
+                        font-size: 1em;
+                    }
                 }
+            }
+        }
+    }
+
+    #nav_drop_cont {
+
+            .nav_drop {
+                position: fixed;
+                width: 400px;
+                background-color: rgb(207, 207, 207);
+                right: 12%;
+                padding: 6px 28px 16px;
+                display: flex;
+                flex-wrap: wrap;
+                border-radius: 0 0 18px 18px;
+                border-left: 3px solid black;
+                border-bottom: 2px solid black;
+
+                @media (max-width: $mq-lg) {
+                    width: 300px;
+                    right: 24%;
+                }
+
+                p {
+                    padding: 4px 10px;
+                    border: solid 1px black;
+                    margin: 5px;
+
+                    @media (max-width: $mq-lg) {
+                        padding: 2px 7px;
+                        margin: 3px;
+                        font-size: .8em;
+                    }
+
+                    &:hover {
+                        border: 1px solid white;
+                        color: white;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+    }
+
+    .nav_drop_cont_hide {
+        display: none;
+    }
+
+    #menu_bars {
+        display: none;
+
+        @media (max-width: $mq-sm) {
+            display: block;
+            font-size: 2em;
+            align-self: center;
+        }
+    }
+
+    .nav_show {
+        display: block;
+        position: fixed;
+        top: 69px;
+        width: 100%;
+        background-color: rgb(207, 207, 207);
+        right: 0;
+        border-bottom: solid 1px black;
+        border-radius: 0 0 22px 22px;
+
+        p {
+            margin: 10px auto;
+            border: none;
+
+            &:first-child {
+                border: none;
             }
         }
     }

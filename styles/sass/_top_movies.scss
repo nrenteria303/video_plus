@@ -1,9 +1,16 @@
 #top_movies {
     @include wrapper;
     margin: 125px auto 0;
+
     .top_movies_heading {
         text-shadow: white 2px -2px 5px;
         font-size: 1.9em;
+        line-height: .7em;
+
+        @media (max-width: $mq-lg) {
+            max-width: 80%;
+            margin: 30px auto;
+        }
     }
 
     #top_movies_inner {
@@ -11,12 +18,35 @@
         justify-content: center;
         margin: 0 auto 0;
 
-        #top_movie_1 {
-            padding-right: 20px;
+        @media (max-width: $mq-xl) {
+            flex-direction: column;
+            max-width: 90%;
         }
 
-        #top_movies_side {
+        #top_movie_1 {
+            padding-right: 20px;
+            max-width: 100%;
+
+            @media (max-width: $mq-xl) {
+                padding: 0;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        #top_movies_addtl {
             width: 200px;
+
+            @media (max-width: $mq-xl) {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            @media (max-width: 900px) {
+                display: none;
+            }
+            
         }
     }
 }
