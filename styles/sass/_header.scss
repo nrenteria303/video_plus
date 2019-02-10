@@ -93,6 +93,14 @@ header {
                     right: 24%;
                 }
 
+                @media (max-width: $mq-sm) {
+                    width: 100vw;
+                    right: 0;
+                    top: 180px;
+                    padding: 40px 0 10px;
+                    z-index: -1;
+                }
+
                 p {
                     padding: 4px 10px;
                     border: solid 1px black;
