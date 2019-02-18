@@ -3,6 +3,10 @@
     height: 320px;
     max-width: 97%;
 
+    &:hover .movie_line_tag {
+        text-shadow: white 2px -2px 5px;
+    }
+
     @media (max-width: $mq-md) {
         height: 500px;
     }
@@ -31,7 +35,6 @@
         @include wrapper;
         margin-bottom: 20px;
         font-size: 1.7em;
-        text-shadow: white 2px -2px 5px;
         line-height: .9em;
     }
 

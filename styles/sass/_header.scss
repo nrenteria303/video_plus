@@ -1,12 +1,12 @@
 header {
     background-image: linear-gradient(178deg, white -10%, rgb(201, 201, 201));
     margin: 0 auto;
-    border-bottom: 1px black solid;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
     z-index: 100;
+    height: 85px;
 
     h1 {
         font-family: 'Orbitron', cursive;
@@ -20,6 +20,7 @@ header {
         @include wrapper;
         display: flex;
         justify-content: space-between;
+        height: 100%;
 
         @media (max-width: $mq-xl) {
             max-width: 800px;
@@ -41,90 +42,40 @@ header {
             display: none;
         }
 
-        p {
-            align-self: center;
+        a {
             width: 100px;
             text-align: center;
             border-right: 1px solid black;
             font-weight: bold;
+            margin: 0;
+            padding-top: vert-center(85px, 27px);
+            text-decoration: none;
+            
+            &:hover {
+                color: white;
+                background-color: black;
+            }
+
+            &:visited {
+                color: black;
+
+                &:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
 
             &:first-child {
-                border-left: 1px solid black;
+                border-right: none;
             }
 
             @media (max-width: $mq-lg) {
                 font-size: .88em;
                 width: 83px;
             }
-
-            a {
-                color: black;
-                text-decoration: none;
-                transition: font-size .2s;
-
-                &:hover {
-                    color: rgb(216, 41, 216);
-                    font-size: 17px;
-
-                    @media (max-width: $mq-lg) {
-                        font-size: 1em;
-                    }
-                }
-            }
         }
-    }
 
-    #nav_drop_cont {
-
-            .nav_drop {
-                position: fixed;
-                width: 400px;
-                background-color: rgb(207, 207, 207);
-                right: 12%;
-                padding: 6px 28px 16px;
-                display: flex;
-                flex-wrap: wrap;
-                border-radius: 0 0 18px 18px;
-                border-left: 3px solid black;
-                border-bottom: 2px solid black;
-
-                @media (max-width: $mq-lg) {
-                    width: 300px;
-                    right: 24%;
-                }
-
-                @media (max-width: $mq-sm) {
-                    width: 100vw;
-                    right: 0;
-                    top: 180px;
-                    padding: 40px 0 10px;
-                    z-index: -1;
-                }
-
-                p {
-                    padding: 4px 10px;
-                    border: solid 1px black;
-                    margin: 5px;
-
-                    @media (max-width: $mq-lg) {
-                        padding: 2px 7px;
-                        margin: 3px;
-                        font-size: .8em;
-                    }
-
-                    &:hover {
-                        border: 1px solid white;
-                        color: white;
-                        font-weight: bold;
-                        cursor: pointer;
-                    }
-                }
-
-            }
-    }
-
-    .nav_drop_cont_hide {
-        display: none;
+        
     }
 
     #menu_bars {
@@ -154,6 +105,98 @@ header {
             &:first-child {
                 border: none;
             }
+        }
+    }
+
+    #fav_drop_cont {
+        position: relative;
+        display: block;
+        width: 100px;
+        text-align: center;
+        font-weight: bold;
+        margin: 0;
+        padding-top: vert-center(85px, 27px);
+        text-decoration: none;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+
+        #favs {
+            margin: 0;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            display: block;
+            padding-top: 0;
+
+            @media (max-width: $mq-lg) {
+                margin-top: 23px;
+            }
+        }
+
+        &:hover {
+            background-color: black;
+        }
+
+        &:hover #favs {
+            color: white;
+        }
+
+        &:hover #nav_drop_cont {
+            display: block;
+        }
+        
+
+        #nav_drop_cont {
+            display: none;
+
+                .nav_drop {
+                    position: absolute;
+                    width: 390px;
+                    background-color: rgb(207, 207, 207);
+                    left: -1px;
+                    top: 85px;
+                    padding: 6px 28px 16px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    border-radius: 0 0 18px 18px;
+                    border-left: 3px solid black;
+                    border-bottom: 2px solid black;
+
+                    @media (max-width: $mq-lg) {
+                        width: 316px;
+                        top: 70px;
+                    }
+
+                    @media (max-width: $mq-sm) {
+                        width: 100vw;
+                        right: 0;
+                        top: 180px;
+                        padding: 40px 0 10px;
+                        z-index: -1;
+                    }
+
+                    p {
+                        padding: 4px 10px;
+                        border: solid 1px black;
+                        margin: 5px;
+                        display: inline-block;
+
+                        @media (max-width: $mq-lg) {
+                            padding: 2px 7px;
+                            margin: 3px;
+                            font-size: .8em;
+                        }
+
+                        &:hover {
+                            border: 1px solid white;
+                            color: white;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
         }
     }
 }

@@ -31,10 +31,10 @@ function menuToggle() {
     }
 }
 
-fav.addEventListener("mouseover", favShow);
-navDrop.addEventListener("mouseleave", favHide);
+// fav.addEventListener("mouseover", favShow);
+// navDrop.addEventListener("mouseleave", favHide);
 menu.addEventListener('click', menuToggle);
 main.addEventListener('click', menuHide);
 main.addEventListener("click", favHide);
-main.addEventListener("mouseover", favHide);
+// main.addEventListener("mouseover", favHide);
 

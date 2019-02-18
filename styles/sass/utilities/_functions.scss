@@ -1,0 +1,3 @@
+@function vert-center($cont_height, $obj_height) {
+    @return ($cont_height - $obj_height) / 2;
+}
