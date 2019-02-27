@@ -6,3 +6,11 @@
     // padding-right: 15px;
     margin: 0 auto;
 }
+
+@mixin c_face_tran($deg) {
+    transform: rotateY($deg) translateZ( calc((100vw / 2) * 1.73205) );
+}
+
+@mixin c_face_mar {
+    margin: 0 calc((100vw - 97vw) / 2);
+}
