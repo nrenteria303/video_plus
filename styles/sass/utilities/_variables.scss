@@ -6,8 +6,11 @@ $mq-md: 820px;
 $mq-sm: 640px;
 $mq-xs: 400px;
 
+// Colors ++++++++++++++++++++++++++++++++
+
+$m-line-dark: rgb(14, 0, 120);
+
 // Carousel +++++++++++++++++++++++++++++++
 
 $c_face_w: 96vw;
-// $c_face_m: calc((100vw - $c_face_w) / 2);
-// $c_face_a: calc(($c_face_w / 2) * 1.73205);
+$c-tran: all .8s ease-in-out;
