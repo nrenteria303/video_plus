@@ -99,3 +99,45 @@ carousels.forEach(rotateCarouselRight);
 menu.addEventListener('click', menuToggle);
 main.addEventListener('click', menuHide);
 main.addEventListener("click", favHide);
+
+var movieList = [
+    {
+        title: 'Movie 1',
+        imgSrc: 'images/PH_344x215.jpg',
+        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+        subset: 'Line Title 1',
+        carouselFace: 1
+    },
+    {
+        title: 'Movie 2',
+        imgSrc: 'images/PH_344x215.jpg',
+        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+        subset: 'Line Title 1',
+        carouselFace: 1
+    },
+    {
+        title: 'Movie 3',
+        imgSrc: 'images/PH_344x215.jpg',
+        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+        subset: 'Line Title 1',
+        carouselFace: 1
+    },
+    {
+        title: 'Movie 4',
+        imgSrc: 'images/PH_344x215.jpg',
+        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+        subset: 'Line Title 1',
+        carouselFace: 1
+    },
+]
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        movieLineTitles: [
+            'Line Title',
+            'Line Title 2'
+        ],
+        movies: movieList,
+    }
+})
