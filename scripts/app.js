@@ -4,31 +4,34 @@ const fav = document.getElementById('favs');
 const menu = document.getElementById('menu_bars');
 const nav = document.getElementById('nav');
 const main = document.getElementById('main');
-const sb1 = document.getElementById('sb_1');
-const sb2 = document.getElementById('sb_2');
-const sb3 = document.getElementById('sb_3');
-const sb4 = document.getElementById('sb_4');
-const sb5 = document.getElementById('sb_5');
-const leftArrow = document.getElementById('left_arrow_1');
-const rightArrow = document.getElementById('right_arrow_1');
-const leftArrow2 = document.getElementById('left_arrow_2');
-const rightArrow2 = document.getElementById('right_arrow_2');
-const leftArrow3 = document.getElementById('left_arrow_3');
-const rightArrow3 = document.getElementById('right_arrow_3');
-const leftArrow4 = document.getElementById('left_arrow_4');
-const rightArrow4 = document.getElementById('right_arrow_4');
-const leftArrow5 = document.getElementById('left_arrow_5');
-const rightArrow5 = document.getElementById('right_arrow_5');
-var carouselIndex = 0;
-var carouselIndex2 = 0;
-var carouselIndex3 = 0;
-var carouselIndex4 = 0;
-var carouselIndex5 = 0;
-var car1 = document.getElementById('c_1');
-var car2 = document.getElementById('c_2');
-var car3 = document.getElementById('c_3');
-var car4 = document.getElementById('c_4');
-var car5 = document.getElementById('c_5');
+
+var carousels = [
+    {carousel: document.getElementById('c_1'), 
+        lArrow: document.getElementById('left_arrow_1'),
+        rArrow: document.getElementById('right_arrow_1'),
+        cIndex: 0,
+        sBar: document.getElementById('sb_1')},
+    {carousel: document.getElementById('c_2'), 
+        lArrow: document.getElementById('left_arrow_2'),
+        rArrow: document.getElementById('right_arrow_2'),
+        cIndex: 0,
+        sBar: document.getElementById('sb_2')},
+    {carousel: document.getElementById('c_3'), 
+        lArrow: document.getElementById('left_arrow_3'),
+        rArrow: document.getElementById('right_arrow_3'),
+        cIndex: 0,
+        sBar: document.getElementById('sb_3')},
+    {carousel: document.getElementById('c_4'), 
+        lArrow: document.getElementById('left_arrow_4'),
+        rArrow: document.getElementById('right_arrow_4'),
+        cIndex: 0,
+        sBar: document.getElementById('sb_4')},
+    {carousel: document.getElementById('c_5'), 
+        lArrow: document.getElementById('left_arrow_5'),
+        rArrow: document.getElementById('right_arrow_5'),
+        cIndex: 0,
+        sBar: document.getElementById('sb_5')}
+]
 
 function favShow() {
     navDrop.classList.remove('nav_drop_cont_hide');
@@ -56,69 +59,43 @@ function menuToggle() {
     }
 }
 
-function rotateCarousel(car, cIndex, sb) {
-    var angle = cIndex / 6 * -360;
-    while (cIndex < 0) {
-        cIndex += 6;
+function decrementIndex(item) {
+    item.cIndex--;
+    while (item.cIndex < 0) {
+        item.cIndex += 6;
     }
-    while (cIndex > 5) {
-        cIndex -= 6;
-    }
-    var sbPct = (5 - cIndex)/5 * 100;
-    car.style.transform = 'rotateY(' + angle + 'deg)';
-    sb.style.backgroundPosition = sbPct + '% 0%';
 }
+
+function incrementIndex(item) {
+    item.cIndex++;
+    while (item.cIndex > 5) {
+        item.cIndex -= 6;
+    }
+}
+
+function rotateCarouselLeft(item) {
+    item.lArrow.addEventListener('click', function() {
+        decrementIndex(item);
+        var angle = item.cIndex / 6 * -360;
+        item.carousel.style.transform = 'rotateY(' + angle + 'deg)';
+        var sbPct = (5 - item.cIndex)/5 * 100;
+        item.sBar.style.backgroundPosition = sbPct + '% 0%';
+    });
+}
+
+function rotateCarouselRight(item) {
+    item.rArrow.addEventListener('click', function() {
+        incrementIndex(item);
+        var angle = item.cIndex / 6 * -360;
+        item.carousel.style.transform = 'rotateY(' + angle + 'deg)';
+        var sbPct = (5 - item.cIndex)/5 * 100;
+        item.sBar.style.backgroundPosition = sbPct + '% 0%';
+    });
+}
+
+carousels.forEach(rotateCarouselLeft);
+carousels.forEach(rotateCarouselRight);
 
 menu.addEventListener('click', menuToggle);
 main.addEventListener('click', menuHide);
 main.addEventListener("click", favHide);
-
-leftArrow.addEventListener('click', function() {
-    carouselIndex--;
-    rotateCarousel(car1, carouselIndex, sb1);
-});
-
-rightArrow.addEventListener('click', function() {
-    carouselIndex++;
-    rotateCarousel(car1, carouselIndex, sb1);
-});
-
-leftArrow2.addEventListener('click', function() {
-    carouselIndex2--;
-    rotateCarousel(car2, carouselIndex2, sb2);
-});
-
-rightArrow2.addEventListener('click', function() {
-    carouselIndex2++;
-    rotateCarousel(car2, carouselIndex2, sb2);
-});
-
-leftArrow3.addEventListener('click', function() {
-    carouselIndex3--;
-    rotateCarousel(car3, carouselIndex3, sb3);
-});
-
-rightArrow3.addEventListener('click', function() {
-    carouselIndex3++;
-    rotateCarousel(car3, carouselIndex3, sb3);
-});
-
-leftArrow4.addEventListener('click', function() {
-    carouselIndex4--;
-    rotateCarousel(car4, carouselIndex4, sb4);
-});
-
-rightArrow4.addEventListener('click', function() {
-    carouselIndex4++;
-    rotateCarousel(car4, carouselIndex4, sb4);
-});
-
-leftArrow5.addEventListener('click', function() {
-    carouselIndex5--;
-    rotateCarousel(car5, carouselIndex5, sb5);
-});
-
-rightArrow5.addEventListener('click', function() {
-    carouselIndex5++;
-    rotateCarousel(car5, carouselIndex5, sb5);
-});
