@@ -1149,14 +1149,14 @@
   
             <div class="scroll_bar"></div>
 
-            <div id="carousel">
-              <div class="carousel_face">
+            <div class="carousel">
+              <div v-for="carousel in movieLine1" class="carousel_face">
                 <div class="movie_line_imgs">
-                  <div v-for="movie in movies" class="movie_line_trans_cont">
+                  <div v-for="movie in carousel" class="movie_line_trans_cont">
                     <div class="movie_line_img_cont">
                       <img :src="movie.imgSrc" alt="placeholder image">
                       <h3 class="movie_line_title">{{ movie.title }}</h3>
-                      <p class="movie_line_description">Lorem ipsum robot explosion and with Shia. He does good with robo-battles and get puss from hot girl with robot tension.</p>
+                      <p class="movie_line_description">{{ movie.description }}</p>
                     </div>
                   </div>
                 </div>

@@ -100,36 +100,214 @@ menu.addEventListener('click', menuToggle);
 main.addEventListener('click', menuHide);
 main.addEventListener("click", favHide);
 
-var movieList = [
-    {
-        title: 'Movie 1',
-        imgSrc: 'images/PH_344x215.jpg',
-        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-        subset: 'Line Title 1',
-        carouselFace: 1
-    },
-    {
-        title: 'Movie 2',
-        imgSrc: 'images/PH_344x215.jpg',
-        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-        subset: 'Line Title 1',
-        carouselFace: 1
-    },
-    {
-        title: 'Movie 3',
-        imgSrc: 'images/PH_344x215.jpg',
-        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-        subset: 'Line Title 1',
-        carouselFace: 1
-    },
-    {
-        title: 'Movie 4',
-        imgSrc: 'images/PH_344x215.jpg',
-        description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-        subset: 'Line Title 1',
-        carouselFace: 1
-    },
-]
+var movieSetList = {
+    line1: {
+        carouselFace1: [
+            {
+                title: 'Movie 1',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 1,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 2',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 1,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 3',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 1,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 4',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 1,
+                lineTitle: 'Line Title'
+            }
+        ],
+        carouselFace2: [
+            {
+                title: 'Movie 5',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 2,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 6',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 2,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 7',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 2,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 8',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 2,
+                lineTitle: 'Line Title'
+            }
+        ],
+        carouselFace3: [
+            {
+                title: 'Movie 9',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 3,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 10',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 3,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 11',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 3,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 12',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 3,
+                lineTitle: 'Line Title'
+            }
+        ],
+        carouselFace4: [
+            {
+                title: 'Movie 13',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 4,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 14',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 4,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 15',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 4,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 16',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 4,
+                lineTitle: 'Line Title'
+            }
+        ],
+        carouselFace5: [
+            {
+                title: 'Movie 17',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 5,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 18',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 5,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 19',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 5,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 20',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 5,
+                lineTitle: 'Line Title'
+            }
+        ],
+        carouselFace6: [
+            {
+                title: 'Movie 21',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 6,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 22',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 6,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 23',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 6,
+                lineTitle: 'Line Title'
+            },
+            {
+                title: 'Movie 24',
+                imgSrc: 'images/PH_344x215.jpg',
+                description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
+                subset: 'Line Title 1',
+                carouselFace: 6,
+                lineTitle: 'Line Title'
+            }
+        ]
+    }
+}
 
 var app = new Vue({
     el: '#app',
@@ -138,6 +316,45 @@ var app = new Vue({
             'Line Title',
             'Line Title 2'
         ],
-        movies: movieList,
+        movieLine1: movieSetList.line1,
+    },
+    methods: {
+        rotateCarouselLeft: function() {
+
+        },
     }
 })
+
+// function decrementIndex(item) {
+//     item.cIndex--;
+//     while (item.cIndex < 0) {
+//         item.cIndex += 6;
+//     }
+// }
+
+// function incrementIndex(item) {
+//     item.cIndex++;
+//     while (item.cIndex > 5) {
+//         item.cIndex -= 6;
+//     }
+// }
+
+// function rotateCarouselLeft(item) {
+//     item.lArrow.addEventListener('click', function() {
+//         decrementIndex(item);
+//         var angle = item.cIndex / 6 * -360;
+//         item.carousel.style.transform = 'rotateY(' + angle + 'deg)';
+//         var sbPct = (5 - item.cIndex)/5 * 100;
+//         item.sBar.style.backgroundPosition = sbPct + '% 0%';
+//     });
+// }
+
+// function rotateCarouselRight(item) {
+//     item.rArrow.addEventListener('click', function() {
+//         incrementIndex(item);
+//         var angle = item.cIndex / 6 * -360;
+//         item.carousel.style.transform = 'rotateY(' + angle + 'deg)';
+//         var sbPct = (5 - item.cIndex)/5 * 100;
+//         item.sBar.style.backgroundPosition = sbPct + '% 0%';
+//     });
+// }
