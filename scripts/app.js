@@ -317,44 +317,33 @@ var app = new Vue({
             'Line Title 2'
         ],
         movieLine1: movieSetList.line1,
+        carouselIndex1: 0,
+        carouselStyle: {
+            transform: 'rotateY(' + (this.carouselIndex1 / 6 * -360) + 'deg)'
+        }
     },
     methods: {
-        rotateCarouselLeft: function() {
-
+        decrementIndex: function() {
+            this.carouselIndex1--;
+            while (this.carouselIndex1 < 0) {
+                this.carouselIndex1 += 6;
+            }
         },
+        incrementIndex: function() {
+            this.carouselIndex1++;
+            while (this.carouselIndex1 > 5) {
+                this.carouselIndex1 -= 6;
+            }
+        },
+    },
+    computed: {
+        setAngle: function() {
+            var angle = this.carouselIndex1 / 6 * -360;
+            return angle;
+        },
+        setScrollPct: function() {
+            var pct = (5 - this.carouselIndex1) / 5 * 100;
+            return pct;
+        }
     }
 })
-
-// function decrementIndex(item) {
-//     item.cIndex--;
-//     while (item.cIndex < 0) {
-//         item.cIndex += 6;
-//     }
-// }
-
-// function incrementIndex(item) {
-//     item.cIndex++;
-//     while (item.cIndex > 5) {
-//         item.cIndex -= 6;
-//     }
-// }
-
-// function rotateCarouselLeft(item) {
-//     item.lArrow.addEventListener('click', function() {
-//         decrementIndex(item);
-//         var angle = item.cIndex / 6 * -360;
-//         item.carousel.style.transform = 'rotateY(' + angle + 'deg)';
-//         var sbPct = (5 - item.cIndex)/5 * 100;
-//         item.sBar.style.backgroundPosition = sbPct + '% 0%';
-//     });
-// }
-
-// function rotateCarouselRight(item) {
-//     item.rArrow.addEventListener('click', function() {
-//         incrementIndex(item);
-//         var angle = item.cIndex / 6 * -360;
-//         item.carousel.style.transform = 'rotateY(' + angle + 'deg)';
-//         var sbPct = (5 - item.cIndex)/5 * 100;
-//         item.sBar.style.backgroundPosition = sbPct + '% 0%';
-//     });
-// }

@@ -1142,14 +1142,14 @@
         <div id="app">
           <div class="movie_line">
             <div class="movie_line_topper">
-              <i class="nav_arrow fas fa-chevron-circle-left"></i>
+              <i v-on:click="decrementIndex" class="nav_arrow fas fa-chevron-circle-left"></i>
               <h1 class="movie_line_tag">{{ movieLineTitles[0] }}</h1>
-              <i class="nav_arrow fas fa-chevron-circle-right"></i>
+              <i v-on:click="incrementIndex" class="nav_arrow fas fa-chevron-circle-right"></i>
             </div>
   
-            <div class="scroll_bar"></div>
+            <div v-bind:style="{backgroundPosition: setScrollPct + '% 0%'}" class="scroll_bar"></div>
 
-            <div class="carousel">
+            <div v-bind:style="{transform: 'rotateY(' + setAngle + 'deg)'}" class="carousel">
               <div v-for="carousel in movieLine1" class="carousel_face">
                 <div class="movie_line_imgs">
                   <div v-for="movie in carousel" class="movie_line_trans_cont">
