@@ -61,6 +61,7 @@
         @media (max-width: $mq-md) {
             flex-wrap: wrap;
             justify-content: space-around;
+            margin-top: 20px;
         }
 
         .movie_line_trans_cont {
@@ -131,10 +132,6 @@
                     border: 2px solid black;
                     z-index: 100;
                     transform: translateZ(75px);
-
-                    @media(max-width: $mq-md) {
-                        transform: translateZ(45px);
-                    }
         
                     .movie_line_description {
                         display: block;
