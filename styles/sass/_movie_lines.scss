@@ -12,7 +12,11 @@
     }
 
     @media (max-width: $mq-sm) {
-        height: 1440px;
+        height: 1210px;
+    }
+
+    @media (max-width: $mq-xs) {
+        height: 1540px;
     }
 
     .movie_line_topper {
@@ -74,6 +78,10 @@
                 margin-bottom: 60px;
             }
 
+            @media (max-width: $mq-xs) {
+                width: 83vw;
+            }
+
             &:hover {
                 z-index: 10;
             }
@@ -127,7 +135,7 @@
                     }
                 }
 
-                @media (max-width: $mq-sm) {
+                @media (max-width: $mq-xs) {
                     background-color: $m-line-dark;
                     border: 2px solid black;
                     z-index: 100;
