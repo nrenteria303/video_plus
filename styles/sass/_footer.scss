@@ -23,6 +23,11 @@ footer {
         justify-content: space-around;
     }
 
+    #footer_column_1{
+        font-size: .9em;
+        width: 30%;
+    }
+
     #footer_column_2 {
         align-self: center;
         h3, p {
@@ -31,6 +36,7 @@ footer {
 
         @media (max-width: $mq-xs) {
             width: 55%;
+            font-size: .82em;
         }
     }
 }
