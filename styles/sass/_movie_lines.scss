@@ -126,6 +126,7 @@
                     text-align: center;
                     margin: 4px auto;
                     font-size: 1.15em;
+                    color: black;
                 }
         
                 &:hover {
@@ -150,8 +151,8 @@
                 }
 
                 @media (max-width: $mq-xs) {
-                    background-color: $m-line-dark;
-                    border: 2px solid black;
+                    // background-color: $m-line-dark;
+                    // border: 2px solid black;
                     z-index: 100;
                     transform: translateZ(75px);
         
@@ -161,9 +162,9 @@
                         line-height: 1.15em;
                     }
         
-                    .movie_line_title {
-                        color: white;
-                    }
+                    // .movie_line_title {
+                    //     color: white;
+                    // }
                 }
             }
         }

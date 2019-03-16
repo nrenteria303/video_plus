@@ -2,6 +2,7 @@
     background: rgb(50, 50, 50);
     border: 4px solid lightgrey;
     border-radius: 40px;
+    color: white;
     height: 92vh;
     width: 95vw;
     position: fixed;
@@ -25,10 +26,27 @@
         }
     }
 
-    h1, 
-    h3,
-    .fav_movie {
-        color: white;
+    #fav_movie_cont {
+        width: 86%;
+        margin: 40px auto;
+        
+        h4 {
+            padding: 6px;
+            margin: 8px 10px;
+            border: solid 1px white;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .fa-play-circle,
+        .fa-minus-circle {
+            margin: 2px 4px;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
     }
 
     h1, 
