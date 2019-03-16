@@ -88,6 +88,10 @@
 
             &:hover {
                 z-index: 10;
+
+                .add_remove_cont {
+                    cursor: pointer;
+                }
             }
 
             .movie_line_img_cont {
@@ -96,7 +100,6 @@
                 position: relative;
                 z-index: 0;
                 margin: 0px;
-                cursor: pointer;
                 display: block;
         
                 img {
@@ -104,13 +107,20 @@
                     z-index: 0;
                 }
 
-                .movie_line_description {
+                .description_cont {
                     max-width: 97%;
                     text-align: center;
                     margin-top: 5px;
                     display: none;
                     font-size: .9em;
                 }
+
+                .add_remove_cont {
+                    position: absolute;
+                    bottom: 2%;
+                    right: 5%;
+                }
+
         
                 .movie_line_title {
                     text-align: center;
@@ -128,7 +138,7 @@
                         transform: translateZ(45px);
                     }
         
-                    .movie_line_description {
+                    .description_cont {
                         display: block;
                         color: white;
                         line-height: 1.15em;
@@ -190,4 +200,8 @@
             @include c_face_tran(300deg);
         }
     }
+}
+
+#fav_popup_btn {
+    margin: 80px 20px 0;
 }

@@ -1,0 +1,42 @@
+#fav_popup {
+    background: rgb(50, 50, 50);
+    border: 4px solid lightgrey;
+    border-radius: 40px;
+    height: 92vh;
+    width: 95vw;
+    position: fixed;
+    top: 4vh;
+    left: 2vw;
+    z-index: 1000;
+    box-shadow: 0 0 30px 2vw darkgrey;
+    // display: none;
+
+    #popup_x_out {
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        color: lightgrey;
+        font-size: 1.4em;
+
+        &:hover {
+            transform: scale(1.24);
+            cursor: pointer;
+            color: white;
+        }
+    }
+
+    h1, 
+    h3,
+    .fav_movie {
+        color: white;
+    }
+
+    h1, 
+    h3 {
+        text-align: center;
+    }
+
+    h3 {
+        margin-top: 14%;
+    }
+}

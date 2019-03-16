@@ -4,6 +4,8 @@ const fav = document.getElementById('favs');
 const menu = document.getElementById('menu_bars');
 const nav = document.getElementById('nav');
 const main = document.getElementById('main');
+const favTrigger = document.getElementById('fav_popup_btn');
+const favPopup = document.getElementById('fav_popup');
 
 function favShow() {
     navDrop.classList.remove('nav_drop_cont_hide');
@@ -973,6 +975,8 @@ var app = new Vue({
     data: {
         movieLines: movieLineList,
         carouselIndex1: 0,
+        popupShowing: false,
+        favs: [],
     },
     methods: {
         decrementIndex: function(index) {
@@ -994,6 +998,19 @@ var app = new Vue({
         setScrollPct: function(index) {
             var pct = (5 - this.movieLines[index].carouselIndex) / 5 * 100;
             return pct;
+        },
+        showFavs: function() {
+            this.popupShowing = true;
+        },
+        hideFavs: function() {
+            this.popupShowing = false;
+        },
+        addFav: function(movie) {
+            this.favs.push(movie);
+            return this.favs;
+        },
+        removeFav: function(index) {
+            this.favs.splice(index, 1);
         }
     },
 })
