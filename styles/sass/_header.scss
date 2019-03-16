@@ -40,14 +40,46 @@ header {
         display: flex;
 
         @media (max-width: $mq-sm) {
-            display: none;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 85px;
+            width: 100%;
+            background-color: rgb(213, 213, 213);
+            right: 0;
+            border-bottom: solid 1px black;
+            border-radius: 0 0 22px 22px;
+
+            .nav_item {
+                margin: 0 auto;
+
+                &:hover {
+                    background-position: 100% 100%;
+                    color: black;
+                }
+            }
+    
+            a, #fav_drop_cont {
+                border: none;
+                padding-top: 10px;
+                width: 100%;
+                text-align: center;
+    
+                &:hover {
+                    background-position: 100% 100%;
+                    color: black;
+                }
+    
+                &:last-child {
+                    margin-bottom: 10px;;
+                }
+            }
         }
 
         .nav_item {
             width: 100px;
             text-align: center;
             font-weight: bold;
-            margin: 0;
             padding-top: vert-center(85px, 27px);
             text-decoration: none;
             background-image: linear-gradient(to top left, 
@@ -87,41 +119,14 @@ header {
         
     }
 
-    #menu_bars {
+    #menu_bars, 
+    #menu_x {
         display: none;
 
         @media (max-width: $mq-sm) {
             display: block;
             font-size: 2em;
             align-self: center;
-        }
-    }
-
-    .nav_show {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 85px;
-        width: 100%;
-        background-color: rgb(213, 213, 213);
-        right: 0;
-        border-bottom: solid 1px black;
-        border-radius: 0 0 22px 22px;
-
-        a, #fav_drop_cont {
-            border: none;
-            padding-top: 10px;
-            width: 100%;
-            text-align: center;
-
-            &:hover {
-                background-position: 100% 100%;
-                color: black;
-            }
-
-            &:last-child {
-                margin-bottom: 10px;;
-            }
         }
     }
 

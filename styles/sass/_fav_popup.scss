@@ -10,12 +10,11 @@
     left: 2vw;
     z-index: 1000;
     box-shadow: 0 0 30px 2vw darkgrey;
-    // display: none;
 
     #popup_x_out {
         position: absolute;
         top: 3%;
-        right: 2%;
+        right: 4%;
         color: lightgrey;
         font-size: 1.4em;
 
@@ -29,6 +28,10 @@
     #fav_movie_cont {
         width: 86%;
         margin: 40px auto;
+
+        @media (max-width: $mq-md) {
+            width: 70%;
+        }
         
         h4 {
             padding: 6px;
@@ -55,6 +58,7 @@
     }
 
     h3 {
-        margin-top: 14%;
+        margin: 14% auto 0;
+        max-width: 85%;
     }
 }

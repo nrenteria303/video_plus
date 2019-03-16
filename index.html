@@ -18,7 +18,7 @@
         <div id="header_logo"> 
           <h1>VideoPLUS <i class="fas fa-tv"></i></h1>
         </div>
-        <nav id="nav">
+        <nav v-show="mobileMenuShowing" id="nav">
           <div class="nav_item" id="fav_drop_cont">
             <a v-on:click="showFavs" 
                 id="fav_popup_btn" 
@@ -46,9 +46,15 @@
           <a class="nav_item" href="#">Contact</a>
           <a class="nav_item" href="#">Account</a>
         </nav>
-        <i v-on:click="" 
+        <i v-if="!mobileMenuShowing"
+            v-on:click="toggleMobileMenu" 
             class="fas fa-bars" 
             id="menu_bars">
+        </i>
+        <i v-else
+            v-on:click="toggleMobileMenu" 
+            class="fas fa-times"
+            id="menu_x">
         </i>
       </div>
     </header>
