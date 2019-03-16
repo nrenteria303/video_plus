@@ -8,7 +8,7 @@
     }
 
     @media (max-width: $mq-md) {
-        height: 520px;
+        height: 620px;
     }
 
     @media (max-width: $mq-sm) {
@@ -16,11 +16,11 @@
     }
 
     @media (max-width: $mq-xs) {
-        height: 1380px;
+        height: 1400px;
     }
 
     @media (max-width: $mq-xxs) {
-        height: 1180px;
+        height: 1200px;
     }
 
     .movie_line_topper {
@@ -35,7 +35,7 @@
 
             &:hover {
                 transform: scale(1.2);
-                color: rgb(200, 255, 212);
+                color: $m-line-dark;
             }
         }
     }
@@ -110,21 +110,14 @@
                 .description_cont {
                     max-width: 97%;
                     text-align: center;
-                    margin-top: 5px;
+                    margin: 0 auto;
                     display: none;
                     font-size: .9em;
                 }
-
-                .add_remove_cont {
-                    position: absolute;
-                    bottom: 2%;
-                    right: 5%;
-                }
-
         
                 .movie_line_title {
                     text-align: center;
-                    margin: 4px auto;
+                    margin: 2px auto;
                     font-size: 1.15em;
                     color: black;
                 }
@@ -151,8 +144,6 @@
                 }
 
                 @media (max-width: $mq-xs) {
-                    // background-color: $m-line-dark;
-                    // border: 2px solid black;
                     z-index: 100;
                     transform: translateZ(75px);
         
@@ -161,10 +152,6 @@
                         color: white;
                         line-height: 1.15em;
                     }
-        
-                    // .movie_line_title {
-                    //     color: white;
-                    // }
                 }
             }
         }

@@ -30,7 +30,7 @@
         margin: 40px auto;
 
         @media (max-width: $mq-md) {
-            width: 70%;
+            width: 90%;
         }
         
         h4 {
@@ -39,6 +39,10 @@
             border: solid 1px white;
             border-radius: 4px;
             display: inline-block;
+
+            @media (max-width: $mq-md) {
+                font-size: .8em;
+            }
         }
 
         .fa-play-circle,
