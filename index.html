@@ -18,7 +18,7 @@
         <div id="header_logo"> 
           <h1>VideoPLUS <i class="fas fa-tv"></i></h1>
         </div>
-        <nav v-show="mobileMenuShowing" id="nav">
+        <nav onload="window.innerWidth < 500 ? mobileMenuShowing = false : mobileMenuShowing = true" v-show="mobileMenuShowing" id="nav">
           <div class="nav_item" id="fav_drop_cont">
             <a v-on:click.prevent="showFavs" 
                 id="fav_popup_btn" 
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-          <div v-for="(line, index) in movieLines" class="movie_line">
+          <div v-cloak v-for="(line, index) in movieLines" class="movie_line">
             <div class="movie_line_topper">
               <i v-on:click="decrementIndex(index)" class="nav_arrow fas fa-chevron-circle-left"></i>
               <h1 class="movie_line_tag">{{ line.lineTitle }}</h1>
@@ -114,11 +114,11 @@
             </div>
           </div>
 
-          <div v-show="popupShowing" id="fav_popup">
+          <div v-cloak v-show="popupShowing" id="fav_popup">
             <i v-on:click="hideFavs" id="popup_x_out" class="fas fa-times"></i>
             <div id="fav_popup_inner">
               <h1>Favorites</h1>
-              <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the plus sign below a movie's description to add it!</h3>
+              <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
               <div id="fav_movie_cont">
                 <h4 v-for="(fav, favIndex) in favs" 
                     class="fav_movie">
