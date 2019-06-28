@@ -8,6 +8,12 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 
+    @media (max-width: $mq-sm) {
+        background-color: rgb(138, 138, 255);
+        background-image: none;
+        background-attachment: none;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Monda', cursive;
     }
