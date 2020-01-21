@@ -30,11 +30,11 @@
                 <div class="nav_drop" id="nav_drop_fav">
                   <p v-on:click="filterGenre('Scary')">Scary</p>
                   <p v-on:click="filterGenre('Funny')">Funny</p>
-                  <p v-on:click="filterGenre('Animation')">Animation</p>
-                  <p v-on:click="filterGenre('Tearjerkers')">Tearjerkers</p>
+                  <p v-on:click="filterGenre('Animated')">Animated</p>
+                  <p v-on:click="filterGenre('Tearjerker')">Tearjerker</p>
                   <p v-on:click="filterGenre('Kids Stuff')">Kids Stuff</p>
                   <p v-on:click="filterGenre('Dark & Twisted')">Dark &amp; Twisted</p>
-                  <p v-on:click="filterGenre('Teen Dramas')">Teen Dramas</p>
+                  <p v-on:click="filterGenre('Teen Drama')">Teen Drama</p>
                   <p v-on:click="filterGenre('Soap Operas')">Soap Operas</p>
                   <p v-on:click="filterGenre('Fantasy')">Fantasy</p>
                   <p v-on:click="filterGenre('Action')">Action</p>
@@ -126,7 +126,7 @@
         </i>
         <div id="fav_popup_inner">
           <h1><span v-show="favTagClicked">{{ clickedTag }} </span>Favorites</h1>
-          <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
+          <h3 v-show="favs.length == 0 && !favTagClicked">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
           <h3 v-show="favTagClicked && clickedFavMovieArray[0].length === 0">You have no {{ clickedTag }} movies in your favorites. Click the button below a movie's description to add it!</h3>
           <div id="fav_movie_cont">
             <h4 v-for="fav in favs"
@@ -142,15 +142,11 @@
               </i>
             </h4>
             <h4 v-for="filteredFav in clickedFavMovieArray[0]"
-                v-show="favTagClicked" 
+                v-show="clickedFavMovieArray[0].length > 0" 
                 class="fav_movie">
               {{ filteredFav.title }}
               <i class="fas fa-play-circle" 
                 title="play">
-              </i>
-              <i v-on:click="removeFav(favs.indexOf(fav))"
-                class="fas fa-minus-circle"
-                title="remove from favorites">
               </i>
             </h4>
           </div>
