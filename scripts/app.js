@@ -987,8 +987,8 @@ var app = new Vue({
             var newMovieObj = new MovieObj(favedMovie, favedMovieTags);
             this.favs.push(newMovieObj);
         },
-        removeFav: function(index) {
-            this.favs.splice(index, 1);
+        removeFav: function(title) {
+            this.favs = this.favs.filter(function(movieObj) {return movieObj.title !== title});
             return this.favs;
         },
         filterGenre: function(tag) {

@@ -104,7 +104,7 @@
                       </button>
                       <button class="add_remove_btn"
                               v-else
-                              v-on:click="removeFav(favs.indexOf(movie.title))">
+                              v-on:click="removeFav(movie.title)">
                         <i class="fas fa-minus"></i> 
                         Remove from Favs
                       </button>
@@ -136,7 +136,7 @@
               <i class="fas fa-play-circle" 
                 title="play">
               </i>
-              <i v-on:click="removeFav(favs.indexOf(fav))"
+              <i v-on:click="removeFav(fav.title)"
                 class="fas fa-minus-circle"
                 title="remove from favorites">
               </i>
